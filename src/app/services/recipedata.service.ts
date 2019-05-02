@@ -6,8 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class RecipedataService {
 
-  uri = 'http://localhost:8080/recipe';
-  versionuri = 'http://localhost:8080/getversion';
+  uri = 'recipe';
+  versionuri = 'getversion';
 
   constructor(private http: HttpClient) { }
   getRecipes() {
