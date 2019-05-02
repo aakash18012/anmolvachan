@@ -3,6 +3,8 @@ import { interval } from 'rxjs';
 import {MatSnackBar} from '@angular/material';
 import {SwPush, SwUpdate} from '@angular/service-worker';
 import * as $ from 'jquery';
+import {AuthenticationService} from './services/authentication.service';
+import {RecipedataService} from './services/recipedata.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +12,7 @@ import * as $ from 'jquery';
 })
 
 export class AppComponent implements OnInit {
-  constructor(private swUpdate: SwUpdate, private swPush: SwPush, private snackbar: MatSnackBar) {
+  constructor(private swUpdate: SwUpdate, private swPush: SwPush, private snackbar: MatSnackBar, public authentication: AuthenticationService, private recipeservice: RecipedataService) {
     this.swUpdate.available.subscribe(evt => {
 this.swUpdate.checkForUpdate().then(() => {
 
@@ -292,7 +294,7 @@ this.swUpdate.checkForUpdate().then(() => {
 
   ];
 
-  africanQuotes: any  = [
+  inspirationalQuotes: any  = [
     {
       quote: 'If you want to go fast, go alone. If you want to go far, go together.',
       author: 'African proverb'
@@ -412,7 +414,7 @@ this.swUpdate.checkForUpdate().then(() => {
 
   ];
 
-  lifeQuotes: any  = [
+/*  lifeQuotes: any  = [
 
     {
       quote: 'Don\'t cry because it\'s over, smile because it happened.',
@@ -540,8 +542,8 @@ this.swUpdate.checkForUpdate().then(() => {
     },
 
 
-  ];
-
+  ];*/
+  lifeQuotes: any;
   relationshipQuotes: any  = [
     {
       quote: 'रिश्ता उस किताब की तरह होता है, जिसे लिखने में सालों लग जाते हैं. लेकिन इस किताब के जलने में कुछ मिनट का हीं समय लगता है.',
@@ -837,7 +839,7 @@ this.swUpdate.checkForUpdate().then(() => {
 
   ];
 
-  sportsQuotes: any  = [
+  successQuotes: any  = [
 
     {
       quote: 'It’s hard to beat a person who never gives up.',
@@ -957,7 +959,7 @@ this.swUpdate.checkForUpdate().then(() => {
 
   ];
 
-  christianityQuotes: any  = [
+  bhagvatgeetaQuotes: any  = [
 
     {
       quote: 'Whatever happened, happened for the good. ' +
@@ -994,7 +996,16 @@ this.swUpdate.checkForUpdate().then(() => {
       author: 'Krishna '
     },
   ];
+  getData() {
+    this.recipeservice
+      .getRecipes()
+      .subscribe((data) => {
+        localStorage.setItem('Bhagvatgeeta', JSON.stringify( data));
+        this.lifeQuotes = data;
+      });
+  }
   ngOnInit() {
+  this.getData();
     const self = this;
     $(document).ready(function () {
 
@@ -1045,16 +1056,16 @@ this.swUpdate.checkForUpdate().then(() => {
         activeState();
       });
 
-      $('#nav-bar-african, #home-african').click(function () {
-        x = self.africanQuotes;
-        k = 'african';
+      $('#nav-bar-inspirational, #home-inspirational').click(function () {
+        x = self.inspirationalQuotes;
+        k = 'inspirational';
         $('#page').attr('class', 'background-style-' + k);
         activeState();
       });
 
-      $('#nav-bar-sports, #home-sports').click(function () {
-        x = self.sportsQuotes;
-        k = 'sports';
+      $('#nav-bar-success, #home-success').click(function () {
+        x = self.successQuotes;
+        k = 'success';
         $('#page').attr('class', 'background-style-' + k);
         activeState();
       });
@@ -1074,9 +1085,9 @@ this.swUpdate.checkForUpdate().then(() => {
         activeState();
       });
 
-      $('#nav-bar-christianity, #home-christianity').click(function () {
-        x = self.christianityQuotes;
-        k = 'christianity';
+      $('#nav-bar-bhagvatgeeta, #home-bhagvatgeeta').click(function () {
+        x = self.bhagvatgeetaQuotes;
+        k = 'bhagvatgeeta';
         $('#page').attr('class', 'background-style-' + k);
         activeState();
       });
@@ -1088,7 +1099,7 @@ this.swUpdate.checkForUpdate().then(() => {
         activeState();
       });
 
-      $('.nav-bar-btn').click(function () {
+      $('.nav-bar-btn,#home-books').click(function () {
         firstQuote();
       });
 

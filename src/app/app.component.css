@@ -752,7 +752,7 @@ h4:hover {
   background-size: 110%;
   transition: background 800ms ease-in-out; }
 
-.featured-image-sports {
+.featured-image-success {
   background: url(../assets/img/sports.jpg)top center no-repeat;
   background-size: 110%;
   transition: background 800ms ease-in-out; }
@@ -772,12 +772,12 @@ h4:hover {
   background-size: 110%;
   transition: background 800ms ease-in-out; }
 
-.featured-image-african {
+.featured-image-inspirational {
   background: url(../assets/img/inspire.jpg)top center no-repeat;
   background-size: 110%;
   transition: background 800ms ease-in-out; }
 
-.featured-image-christianity {
+.featured-image-bhagvatgeeta {
   background: url(../assets/img/geeta.jpg)top center no-repeat;
   background-size: 110%;
   transition: background 800ms ease-in-out; }
@@ -807,7 +807,7 @@ h4:hover {
   margin-top: 2em;
   text-align: center; }
 
-.background-style-sports {
+.background-style-success {
   background: url(../assets/img/sports.jpg)top center no-repeat;
   background-size: cover;
   width: 100%;
@@ -849,7 +849,7 @@ h4:hover {
   transition-duration: 500ms;
   overflow: hidden; }
 
-.background-style-african {
+.background-style-inspirational {
   background: url(../assets/img/inspire.jpg)top center no-repeat;
   background-size: cover;
   width: 100%;
@@ -877,7 +877,7 @@ h4:hover {
   transition-duration: 500ms;
   overflow: hidden; }
 
-.background-style-christianity {
+.background-style-bhagvatgeeta {
   background: url(../assets/img/geeta.jpg)top center no-repeat;
   background-size: cover;
   width: 100%;

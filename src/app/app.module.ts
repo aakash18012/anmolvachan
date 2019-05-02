@@ -19,6 +19,7 @@ import {
   MatSnackBarModule,
   MatSnackBar
 } from '@angular/material';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import {
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    HttpClientModule
   ],
   providers: [SwUpdate],
   bootstrap: [AppComponent]
