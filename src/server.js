@@ -36,7 +36,7 @@ var version=process.env.version || "1.0"
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.static(path.join(__dirname,'../dist/my-app')));
+app.use(express.static(path.join(__dirname,'../dist')));
 
 app.get('/getversion',function(req,res){
   console.log('Version '+version);
