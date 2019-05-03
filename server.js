@@ -6,25 +6,6 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/dist/my-app'));
-
-app.get('/!*', function(req,res) {
-
-  res.sendFile(path.join(__dirname+'/dist/my-app/index.html'));
-});
-
-// Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 8080);
-*/
-
-/*
-//Install express server
-const express = require('express');
-const path = require('path');
-
-const app = express();
-
-// Serve only the static files form the dist directory
 app.use(express.static(__dirname + '/dist'));
 
 app.get('/!*', function(req,res) {
@@ -35,8 +16,6 @@ app.get('/!*', function(req,res) {
 // Start the app by listening on the default Heroku port
 app.listen(process.env.PORT || 8080);
 */
-
-
 const express = require('express'),
   path = require('path'),
   bodyParser = require('body-parser'),
@@ -52,7 +31,6 @@ mongoose.connect(process.env.MONGOLAB_URI || config.DB,{ useNewUrlParser: true }
   () => {console.log('Database is connected') },
   err => { console.log('Cannot connect to the database'+' '+ err)}
 );
-process.setMaxListeners(0);
 var version=process.env.version || "1.0"
 
 const app = express();
@@ -64,33 +42,11 @@ app.get('/getversion',function(req,res){
   console.log('Version '+version);
   res.status(200).json({version:version})
 });
-app.use('/quots', quoteRoutes);
+app.use('/quotes', quoteRoutes);
 app.use('/user', userRoute);
-
-
-
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8000;
 
 const server = app.listen(port, function(){
   console.log('Listening on port ' + port);
   console.log('Version '+version);
-
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
