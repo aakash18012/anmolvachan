@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class QuoteService {
 
-  uri = 'http://localhost:8080/quotes';
+  uri = 'quotes';
 
   constructor(private http: HttpClient) { }
   getQuotes(quoteType) {
