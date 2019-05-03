@@ -10,7 +10,7 @@ export class QuoteService {
 
   constructor(private http: HttpClient) { }
   getQuotes(quoteType) {
-    return this .http.get(`${this.uri}/get/bhagvatgeeta`);
+    return this .http.get(`${this.uri}/get/${quoteType}`);
   }
  /* deleteQuote(id) {
     return this

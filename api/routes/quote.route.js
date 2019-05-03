@@ -28,7 +28,7 @@ let Relationships = require('../models/Relationships');
 // Defined get data(index or listing) route
 quoteRoutes.route('/get/bhagvatgeeta').get(function (req, res) {
   let  modalType;
- /* switch(req.params.type) {
+  switch(req.params.type) {
     case 'bhagvatgeeta':
       modalType=Bhagvatgeeta;
       break;
@@ -53,9 +53,9 @@ quoteRoutes.route('/get/bhagvatgeeta').get(function (req, res) {
     case 'movie':
       modalType=Movies;
       break;
-  }*/
+  }
 
-  Bhagvatgeeta.find(function (err, quotes){
+  modalType.find(function (err, quotes){
     let responseJson={
       results:[],
       type:'',
