@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// Define collection and schema for Recipe
+// Define collection and schema for Life Quotes
 let Life = new Schema({
   quote: {
     type: String

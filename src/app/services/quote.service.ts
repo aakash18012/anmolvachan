@@ -4,16 +4,15 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class RecipedataService {
+export class QuoteService {
 
-  uri = 'recipe';
-  versionuri = 'getversion';
+  uri = 'http://localhost:8080/quotes';
 
   constructor(private http: HttpClient) { }
-  getRecipes() {
-    return this .http.get(`${this.uri}`);
+  getQuotes(quoteType) {
+    return this .http.get(`${this.uri}/get/${quoteType}`);
   }
-  deleteRecipe(id) {
+ /* deleteQuote(id) {
     return this
       .http
       .get(`${this.uri}/delete/${id}`);
@@ -22,5 +21,5 @@ export class RecipedataService {
 
     const url = this.versionuri;
     return this.http.get(url, { responseType: 'text' as 'json' });
-  }
+  }*/
 }

@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const userRoutes = express.Router();
-// Require Recipe model in our routes module
+// Require Quote model in our routes module
 let Users = require('../models/Users');
 let Life = require('../models/Life');
 let Bhagvatgeeta = require('../models/Bhagvatgeeta');

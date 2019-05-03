@@ -7,19 +7,15 @@ import 'rxjs/add/operator/map';
   providedIn: 'root'
 })
 export class AuthenticationService {
-  fakeResponse = {res: true};
-  uri = 'recipe';
   constructor(  private httpClient: HttpClient) {
-    localStorage.setItem('cmLocal', JSON.stringify(this.fakeResponse));
-
   }
-  signUp(obj) {
+ /* signUp(obj) {
     this.httpClient.post(`${this.uri}/signup`, obj)
       .subscribe(res => console.log('Done'));
   }
-  getRecipes() {
+  getQuotes() {
     return this.httpClient.get(`${this.uri}`);
-  }
+  }*/
  /* /!**
    * LOGIN FUNCTION
    *!/

@@ -5,13 +5,14 @@ const express = require('express'),
   mongoose = require('mongoose'),
   config = require('./DB');
 
-const recipeRoute = require('./routes/recipe.route');
+const quoteRoutes = require('./routes/quote.route');
 const userRoute=require('./routes/user.route');
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGOLAB_URI || config.DB,{ useNewUrlParser: true } ).then(
   () => {console.log('Database is connected') },
   err => { console.log('Cannot connect to the database'+ err)}
 );
+process.setMaxListeners(0);
 var version=process.env.version || "1.0"
 
 const app = express();
@@ -23,7 +24,7 @@ app.get('/getversion',function(req,res){
   console.log('Version '+version);
   res.status(200).json({version:version})
 });
-app.use('/recipe', recipeRoute);
+app.use('/quotes', quoteRoutes);
 app.use('/user', userRoute);
 
 const port = process.env.PORT ||8080;

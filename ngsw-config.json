@@ -11,7 +11,8 @@
           "/*.css",
           "/*.js",
           "/*.jpg",
-          "/*.json"
+          "/*.json",
+          "/assets/**"
         ],
         "urls": [
           "https://fonts.googleapis.com/**",
@@ -26,6 +27,18 @@
         "files": [
           "/assets/**"
         ]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "from-api",
+      "urls": ["https://anmolvachan.herokuapp.com/quots/"],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 15,
+        "maxAge": "1h",
+        "timeout": "5s"
       }
     }
   ]
