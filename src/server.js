@@ -23,8 +23,8 @@ const express = require('express'),
   mongoose = require('mongoose'),
   config = require('./api/DB');
 
-const quoteRoutes = require('./api/routes/quote.route');
-const userRoute=require('./api/routes/user.route');
+const quoteRoutes = require('../api/routes/quote.route');
+const userRoute=require('../api/routes/user.route');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGOLAB_URI || config.DB,{ useNewUrlParser: true } ).then(
