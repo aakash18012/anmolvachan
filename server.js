@@ -44,7 +44,7 @@ app.get('/getversion',function(req,res){
 });
 app.use('/quotes', quoteRoutes);
 app.use('/user', userRoute);
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 8080;
 
 const server = app.listen(port, function(){
   console.log('Listening on port ' + port);
