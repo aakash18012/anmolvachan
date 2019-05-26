@@ -33,7 +33,7 @@
   "dataGroups": [
     {
       "name": "from-api",
-      "urls": ["https://anmolvachan.herokuapp.com/quots/"],
+      "urls": ["https://anmolvachan.herokuapp.com/quots/","https://anmolvachan.herokuapp.com/"],
       "cacheConfig": {
         "strategy": "freshness",
         "maxSize": 15,
