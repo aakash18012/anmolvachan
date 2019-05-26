@@ -1,27 +1,20 @@
-# MyApp
+# anmolvachan
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.2.
+This was built using Angular 7 with offline support using pwa , to view live projects visit http://anmolvachan.herokuapp.com/
 
-## Development server
+Ever wanted to motivation in your life ? If yes, then this app will help you to get motivated at every point of your life with it largest collection of motivational quotes.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This app contains Motivational, Inspirational and Success, Startup, Life Quotes that starts your day with motivation.
 
-## Code scaffolding
+If you want to achieve greatness, you need to stop asking for permission. This is why motivation is important in life because it stops asking questions and aligns you to work towards your goals.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Goals are the stepping stones toward your dreams so in order to achieve them, you need motivation to keep you chugging along towards them.
 
-## Build
+Without motivation, you can’t achieve anything. There are no goal posts to aim for and no purpose to strive towards.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+![screencapture-anmolvachan-herokuapp-2019-05-26-13_31_06](https://user-images.githubusercontent.com/20945837/58378999-a4f9f500-7fba-11e9-8d7f-fba76cb1fd4a.png)
 
-## Running unit tests
+![screencapture-anmolvachan-herokuapp-2019-05-26-13_31_17](https://user-images.githubusercontent.com/20945837/58379001-a75c4f00-7fba-11e9-8a5f-79fe81285d19.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![screencapture-anmolvachan-herokuapp-2019-05-26-13_31_25](https://user-images.githubusercontent.com/20945837/58379004-a9bea900-7fba-11e9-80c1-7576e7ee2bdc.png)
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
