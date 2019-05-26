@@ -12,14 +12,12 @@ export class QuoteService {
   getQuotes(quoteType) {
     return this .http.get(`${this.uri}/get/${quoteType}`);
   }
+  
+  // for admin 
  /* deleteQuote(id) {
     return this
       .http
       .get(`${this.uri}/delete/${id}`);
-  }
-  getVersion() {
-
-    const url = this.versionuri;
-    return this.http.get(url, { responseType: 'text' as 'json' });
   }*/
+
 }

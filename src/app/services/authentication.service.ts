@@ -9,13 +9,15 @@ import 'rxjs/add/operator/map';
 export class AuthenticationService {
   constructor(  private httpClient: HttpClient) {
   }
+
+// for admin 
+
  /* signUp(obj) {
     this.httpClient.post(`${this.uri}/signup`, obj)
       .subscribe(res => console.log('Done'));
   }
-  getQuotes() {
-    return this.httpClient.get(`${this.uri}`);
-  }*/
+ */
+
  /* /!**
    * LOGIN FUNCTION
    *!/
@@ -24,13 +26,8 @@ export class AuthenticationService {
 
     return this.httpClient.post<any>(`${this.uri}/login`, body)
       .map(response => {
-        const resdata = response;
-        if (resdata && resdata.token) {
-          localStorage.setItem('cmLocal', JSON.stringify(resdata));
-        }
-        return resdata;
-      });
-  };*/
+         return response;
+  });*/
 
 }
 
